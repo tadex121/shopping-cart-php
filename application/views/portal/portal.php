@@ -23,6 +23,8 @@
             <a href="<?= BASE_URL . "/prijava"; ?>" title="Prijava"> 
             <?php echo!Helper::checkIfUserLoggedIn() ? "Prijava" : ""; ?>
             <?php else: ?>
+                <?php $User = Helper::getUser(); ?>
+                <div class="user-info"><?= $User->Firstname . " " . $User->Lastname ?></div>
             <a class="log-out" href="<?= BASE_URL . "/log-out"; ?>" title="Odjava">
                     Odjava
                 </a>

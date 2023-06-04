@@ -85,11 +85,10 @@ class User {
         if (!$CheckUser) {
 
             $UUID = Helper::generateUUID();
-            $ServerName = SERVER_NAME;
 
             Q::table("users")
-                    ->insert("UUID, Email, Password, Firstname, Lastname, CreatedAt, Status, Role, ServerName")
-                    ->values("'$UUID', '$Email', '$Password', '$Firstname', '$Lastname', NOW(), 'active', 'user', '$ServerName'")
+                    ->insert("UUID, Email, Password, Firstname, Lastname, Status, Role")
+                    ->values("'$UUID', '$Email', '$Password', '$Firstname', '$Lastname', 'active', 'user'")
                     ->execute();
 
             $UserID = Q::lastID();

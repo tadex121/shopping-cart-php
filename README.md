@@ -22,6 +22,7 @@ CREATE TABLE users (
   Password VARCHAR(255),
   Firstname VARCHAR(255),
   Lastname VARCHAR(255),
+  Email VARCHAR(255),
   Role VARCHAR(55),
   Status ENUM('active', 'deleted'),
   PRIMARY KEY (ID)

@@ -289,3 +289,11 @@ body{
   .completed input[type="text"] {
     pointer-events: none;
   }
+
+  .user-info {
+    position: absolute;
+    right: 125px;
+    line-height: 40px;
+    font-size: 16px;
+    color: #fff;
+  }

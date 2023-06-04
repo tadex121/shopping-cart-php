@@ -80,5 +80,17 @@ class Helper {
         return vsprintf('%s%s-%s-%s-%s-%s%s%s', str_split(bin2hex($RandBytes), 4));
     }
 
+    static function getUser() {
+
+        $UserID = $_SESSION["UserID"];
+
+        Q::table("users")
+        ->select()
+        ->where("ID = '$UserID'")
+        ->execute($User, false);
+
+        return $User;
+    }
+
 
 }
